@@ -34,7 +34,7 @@ class SelectDateTime extends StatelessWidget {
                                             child: Text(
                                               "Done",
                                               style: TextStyle(
-                                                  color: TColor.primary,
+                                                  color: TColor.white,
                                                   fontSize: 16,
                                                   fontWeight: FontWeight.w700),
                                             ))
@@ -62,7 +62,7 @@ class SelectDateTime extends StatelessWidget {
                             Text(
                               title,
                               style: TextStyle(
-                                  color: TColor.primaryText,
+                                  color: TColor.white,
                                   fontSize: 20,
                                   fontWeight: FontWeight.w700),
                             ),
