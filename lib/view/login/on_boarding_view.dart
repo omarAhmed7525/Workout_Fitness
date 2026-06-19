@@ -16,12 +16,12 @@ class _OnBoardingViewState extends State<OnBoardingView> {
   int selectPage = 0;
 
   List pageArr = [
-    {
+   /* {
       "title": "Have a good health",
       "subtitle":
           "Being healthy is all, no health is nothing.\nSo why do not we",
-      "image": "assets/img/on_board_1.png",
-    },
+      "image": "assets/img/on_board_bg.png",
+    },*/
     {
       "title": "Be stronger",
       "subtitle":
@@ -71,30 +71,30 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                   children: [
                     Text(
                       pObj["title"].toString(),
-                      style: TextStyle(
-                          color: TColor.primary,
+                      style: const TextStyle(
+                          color: Colors.indigoAccent,
                           fontSize: 24,
                           fontWeight: FontWeight.w700),
                     ),
 
-                   SizedBox(height: media.width * 0.25, ),
+                   /*SizedBox(height: media.width * 0.25, ),
                     Image.asset(
                       pObj["image"].toString(),
                       width: media.width * 0.8,
                       height: media.width * 0.8,
                       fit: BoxFit.contain,
-                    ),
+                    ),*/
 
                     SizedBox(
-                      height: media.width * 0.3,
+                      height: media.width * 1.63,
                     ),
 
                      Text(
                       pObj["subtitle"].toString(),
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                          color: TColor.secondaryText,
-                          fontSize: 14),
+                          color: TColor.primaryText,
+                          fontSize: 15.5),
                     ),
                   ],
                 );

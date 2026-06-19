@@ -20,7 +20,7 @@ class _Step2ViewState extends State<Step2View> {
     var media = MediaQuery.sizeOf(context);
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: TColor.white,
+          backgroundColor: TColor.background,
           centerTitle: true,
           leading: IconButton(
               onPressed: () {
@@ -48,7 +48,7 @@ class _Step2ViewState extends State<Step2View> {
                   "Select your fitness level",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      color: TColor.secondaryText,
+                      color: TColor.primaryText,
                       fontSize: 24,
                       fontWeight: FontWeight.w700),
                 ),

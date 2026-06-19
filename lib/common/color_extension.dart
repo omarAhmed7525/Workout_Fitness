@@ -2,9 +2,7 @@
 import 'package:flutter/material.dart';
 
 class TColor {
-  // الخلفية الأساسية - Dark background
   static Color get background => const Color(0xff0D1117);
-  // خلفية ثانية للـ Cards/Containers - أفتح شوية من background
   static Color get surface => const Color(0xff161B22);
 
   static Color get primary => const Color(0xff00BFFF);

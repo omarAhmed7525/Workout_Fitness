@@ -7,6 +7,32 @@ import '../../common_widget/select_datetime.dart';
 import '../../common_widget/select_picker.dart';
 import '../menu/menu_view.dart';
 
+
+List<String> generateRangeValues({
+  required int start,
+  required int end,
+  required String unit,
+}) {
+  return List.generate(
+    end - start + 1,
+        (index) => '${start + index} $unit',
+  );
+}
+
+class MeasurementValues {
+  static final List<String> heightValues = generateRangeValues(
+    start: 100,
+    end: 250,
+    unit: 'cm',
+  );
+
+  static final List<String> weightValues = generateRangeValues(
+    start: 30,
+    end: 200,
+    unit: 'kg',
+  );
+}
+
 class Step3View extends StatefulWidget {
   const Step3View({super.key});
 
@@ -26,7 +52,7 @@ class _Step3ViewState extends State<Step3View> {
     var media = MediaQuery.sizeOf(context);
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: TColor.white,
+          backgroundColor: TColor.background,
           centerTitle: true,
           leading: IconButton(
               onPressed: () {
@@ -54,7 +80,7 @@ class _Step3ViewState extends State<Step3View> {
                   "Personal Details",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      color: TColor.secondaryText,
+                      color: TColor.primaryText,
                       fontSize: 24,
                       fontWeight: FontWeight.w700),
                 ),
@@ -83,7 +109,7 @@ class _Step3ViewState extends State<Step3View> {
                               Text(
                                 "Apple Health",
                                 style: TextStyle(
-                                    color: TColor.secondaryText,
+                                    color: TColor.primaryText,
                                     fontSize: 20,
                                     fontWeight: FontWeight.w700),
                               ),
@@ -91,7 +117,7 @@ class _Step3ViewState extends State<Step3View> {
                                 height: 8,
                               ),
                               Text(
-                                "Allow access ti fill my parameters",
+                                "Allow access to fill my parameters",
                                 style: TextStyle(
                                     color: TColor.secondaryText, fontSize: 16),
                               ),
@@ -121,21 +147,7 @@ class _Step3ViewState extends State<Step3View> {
                     ),
                     Divider(color: TColor.divider, height: 1),
                     SelectPicker(
-                      allVal: const [
-                        "160 cm",
-                        "161 cm",
-                        "162 cm",
-                        "163 cm",
-                        "164 cm",
-                        "165 cm",
-                        "166 cm",
-                        "167 cm",
-                        "168 cm",
-                        "169 cm",
-                        "170 cm",
-                        "171 cm",
-                        "172 cm"
-                      ],
+                      allVal: MeasurementValues.heightValues,
                       selectVal: selectHeight,
                       title: "Height",
                       didChange: (newVal) {
@@ -146,17 +158,7 @@ class _Step3ViewState extends State<Step3View> {
                     ),
                     Divider(color: TColor.divider, height: 1),
                     SelectPicker(
-                      allVal: const [
-                        "50 kg",
-                        "51 Kg",
-                        "52 kg",
-                        "53 kg",
-                        "54 kg",
-                        "55 kg",
-                        "56 kg",
-                        "57 kg",
-                        "58 kg",
-                      ],
+                      allVal: MeasurementValues.weightValues,
                       selectVal: selectWeight,
                       title: "Weight",
                       didChange: (newVal) {

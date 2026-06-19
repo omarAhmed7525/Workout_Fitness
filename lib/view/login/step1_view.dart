@@ -19,7 +19,7 @@ class _Step1ViewState extends State<Step1View> {
     return Scaffold(
 
       appBar: AppBar(
-        backgroundColor: TColor.white,
+        backgroundColor: TColor.background,
         centerTitle: true, title:   Text(
             "Step 1 of 3",
             style: TextStyle(
@@ -49,7 +49,7 @@ class _Step1ViewState extends State<Step1View> {
               "Welcome to\nCapi Fitness Application",
               textAlign:  TextAlign.center,
               style: TextStyle(
-                  color: TColor.secondaryText,
+                  color: TColor.primaryText,
                   fontSize: 24,
                   fontWeight: FontWeight.w700),
             ),
@@ -60,7 +60,7 @@ class _Step1ViewState extends State<Step1View> {
             textAlign: TextAlign.center,
             style: TextStyle(
                 color: TColor.secondaryText,
-                fontSize: 16,
+                fontSize: 18.5,
                 fontWeight: FontWeight.w300),
           ),
               const Spacer(),
